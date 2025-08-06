@@ -1,28 +1,28 @@
-"use server";
+'use server';
 
-import { API_BASE_URL } from "@/consts/util-consts";
-import { UNEXPCTD_ERR } from "@/errors/errors";
+import { API_BASE_URL } from '@/consts/util-consts';
+import { UNEXPCTD_ERR } from '@/errors/errors';
 import {
   Repository,
   repositoryResponseSchema,
-} from "@/types/api-types/repository";
-import { ApiResponse } from "@/types/util-types";
-import { fetchWithAuth } from "@/util/auth-server";
+} from '@/types/api-types/repository';
+import { ApiResponse } from '@/types/util-types';
+import { fetchWithAuth } from '@/util/auth-server';
 
 export async function getAllRepositorylist(
-  pageNo: number = 1
+  pageNo: number = 1,
 ): Promise<ApiResponse<Repository>> {
   try {
     const date = new Date();
     date.setDate(date.getDate() - 10);
-    const formattedDate = date.toISOString().split("T")[0];
+    const formattedDate = date.toISOString().split('T')[0];
     const response = await fetchWithAuth(
       `${API_BASE_URL}/search/repositories?q=created:>${formattedDate}&sort=stars&order=desc&page=${pageNo}`,
 
       {
-        method: "GET",
-        cache: "no-store",
-      }
+        method: 'GET',
+        cache: 'no-store',
+      },
     );
 
     if (!response.ok) {

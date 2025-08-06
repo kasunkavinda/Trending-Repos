@@ -1,10 +1,10 @@
-"use client";
-import { getAllRepositorylist } from "@/actions/repos";
-import Card from "@/components/ui/card";
-import { Pagination } from "@/components/common/pagination";
-import { useEffect, useState } from "react";
-import { Repository } from "@/types/api-types/repository";
-import TableSkeleton from "../common/table-skeleton";
+'use client';
+import { getAllRepositorylist } from '@/actions/repos';
+import Card from '@/components/ui/card';
+import { Pagination } from '@/components/common/pagination';
+import { useEffect, useState } from 'react';
+import { Repository } from '@/types/api-types/repository';
+import TableSkeleton from '../common/table-skeleton';
 
 interface HomeProp {
   page: number;
@@ -33,7 +33,7 @@ export default function HomeComponent({ page }: HomeProp) {
         <TableSkeleton />
       ) : (
         <div>
-          {repositories?.map((item) => (
+          {repositories?.map(item => (
             <div key={item.id}>
               <Card
                 name={item.name}

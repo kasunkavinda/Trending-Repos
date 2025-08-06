@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod';
 
 export type SearchParams = Promise<{
   [key: string]: string | string[] | undefined;

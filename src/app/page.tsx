@@ -1,5 +1,5 @@
-import HomeComponent from "@/components/home/home";
-import { SearchParams } from "@/types/util-types";
+import HomeComponent from '@/components/home/home';
+import { SearchParams } from '@/types/util-types';
 
 export default async function Home(props: { searchParams: SearchParams }) {
   const searchParams = await props.searchParams;

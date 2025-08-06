@@ -1,1 +1,1 @@
-export const UNEXPCTD_ERR = "Unexpected error occurred";
+export const UNEXPCTD_ERR = 'Unexpected error occurred';

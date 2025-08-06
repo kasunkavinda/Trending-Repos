@@ -1,6 +1,6 @@
-import React from "react";
-import { FaStar } from "react-icons/fa";
-import { IoMdSettings } from "react-icons/io";
+import React from 'react';
+import { FaStar } from 'react-icons/fa';
+import { IoMdSettings } from 'react-icons/io';
 
 const Footer = () => {
   return (

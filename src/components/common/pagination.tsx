@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams, useRouter } from 'next/navigation';
 
 type PaginationProps = {
   totalPages: number;
@@ -9,11 +9,11 @@ type PaginationProps = {
 export function Pagination({ totalPages }: PaginationProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const currentPage = parseInt(searchParams.get("page") || "1", 10);
+  const currentPage = parseInt(searchParams.get('page') || '1', 10);
 
   const navigateToPage = (page: number) => {
     const newParams = new URLSearchParams(searchParams);
-    newParams.set("page", page.toString());
+    newParams.set('page', page.toString());
     router.push(`?${newParams.toString()}`);
   };
 
@@ -23,8 +23,8 @@ export function Pagination({ totalPages }: PaginationProps) {
       onClick={() => navigateToPage(page)}
       className={`px-3 py-1 rounded-md  ${
         currentPage === page
-          ? "bg-blue-shade text-black bg-primary"
-          : " text-gray-800 hover:bg-gray-100"
+          ? 'bg-blue-shade text-black bg-primary'
+          : ' text-gray-800 hover:bg-gray-100'
       }`}
     >
       {page}
@@ -42,7 +42,7 @@ export function Pagination({ totalPages }: PaginationProps) {
       </button>
 
       {Array.from({ length: totalPages }, (_, i) => i + 1)
-        .filter((page) => {
+        .filter(page => {
           return (
             page === 1 ||
             page === totalPages ||

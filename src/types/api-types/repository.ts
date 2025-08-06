@@ -1,5 +1,5 @@
-import { z } from "zod";
-import { ApiResponse, apiResponseSchema } from "../util-types";
+import { z } from 'zod';
+import { ApiResponse, apiResponseSchema } from '../util-types';
 
 export const OwnerSchema = z.object({
   login: z.string(),

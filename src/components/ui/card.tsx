@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import { FaStar } from "react-icons/fa";
+import React from 'react';
+import Image from 'next/image';
+import { FaStar } from 'react-icons/fa';
 
 interface CardProps {
   name: string;
