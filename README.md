@@ -1,12 +1,15 @@
 # Trending Repos
 
-Small web app that is responsive using Reactjs that list the most starred Github repos created in the last 10 days.
+Small web app that is responsive using Next.Js which is React.js framework that list the most starred Github repos created in the last 10 days.
 
 ## Getting Started
 
 First, install [Node.js](https://nodejs.org/en/download).
+
 Package manager used is [Pnpm](https://pnpm.io/).
+
 Clone the project.
+
 Then, run the development server.
 
 ```bash
