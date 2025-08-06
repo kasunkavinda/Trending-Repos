@@ -1,5 +1,7 @@
 # Trending Repos
 
+Live link: [Trending Repos](https://trending-repos-one.vercel.app/)
+
 Small web app that is responsive using Next.Js which is React.js framework that list the most starred Github repos created in the last 10 days.
 
 ## Getting Started
