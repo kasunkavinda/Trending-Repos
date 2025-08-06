@@ -4,11 +4,11 @@ Small web app that is responsive using Next.Js which is React.js framework that 
 
 ## Getting Started
 
-First, install [Node.js](https://nodejs.org/en/download).
+First, install [Node.js](https://nodejs.org/en/download)
 
-Package manager used is [Pnpm](https://pnpm.io/).
+Package manager used is [Pnpm](https://pnpm.io/)
 
-Clone the project.
+Clone the project
 
 Then, run the development server.
 
