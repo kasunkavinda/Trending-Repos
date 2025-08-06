@@ -1,37 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trending Repos
+
+Small web app that is responsive using Reactjs that list the most starred Github repos created in the last 10 days.
 
 ## Getting Started
 
-First, run the development server:
+First, install [Node.js](https://nodejs.org/en/download).
+Package manager used is [Pnpm](https://pnpm.io/).
+Clone the project.
+Then, run the development server.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm i
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Reusable UI Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To streamline development (especially in teams) and also to minimize rework across developers, I have built modular, pre-designed UI components.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+path: src/components/ui
+```
 
-## Learn More
+## Architecture Principles
 
-To learn more about Next.js, take a look at the following resources:
+- Server Components First: Prioritize server-rendered logic wherever possible.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Data Fetching: Uses native fetch() which now supports deduplication, caching, and Request memoization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Zod for Runtime Validation: TypeScript is compile-time only. Zod handles runtime validation to ensure type safety where it matters (API inputs, responses, form submissions, etc).
 
-## Deploy on Vercel
+## Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Trending-Repos
+- Next.js App Router
+- React 19+
+- Zod for runtime schema validation
+- Native fetch with full caching support
+- Modular layouts + reusable components
